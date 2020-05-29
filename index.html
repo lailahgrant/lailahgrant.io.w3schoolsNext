@@ -1,102 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<title>W3Schools</title>
-<meta charset="utf-8" >
-<meta name="viewport" content="width=device-width, initial-scale=1" >
+  <head>
+    <title>W3Schools</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<style>
-* {
-box-sizing: border-box;
-}
-body{  font-family: Arial, Helvetica, sans-serif;
-}
-/* Style the header */
-header {
-background-color: #666;
-padding: 30px;
-text-align: center;
-/* font-size: 35px; */
-font-size: 5vw; /*responsive font  "vw" unit, which means the "viewport width".*/
-color: white;
-}
-/* Container for flexboxes */
-section {
-display: -webkit-flex;
-display: flex;
-}
-/* Style the navigation menu */
-nav{
--webkit-flex:1;
--ms-flex:1;
-flex:1;
-background: #ccc;
-padding: 20px;
-}
-/* style the list inside the menu */
-nav ul {
-  list-style-type: none;
-  padding: 0;
-}
-/* style the content */
-article{
-  -webkit-flex:3;
-  -ms-flex:3;
-  flex: 3;
-  background: #f1f1f1;
-  padding: 20px;
-}
-/* Style the footer */
-footer {
-  background-color: #777;
-  padding: 10px;
-  text-align: center;
-  color: white;
-}
-/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
-@media (max-width:600px) {
-  section {
-    -webkit-flex-direction: column;
-    flex-direction: column;
-  }
-}
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      /* Style the header */
+      header {
+        background-color: #666;
+        padding: 30px;
+        text-align: center;
+        /* font-size: 35px; */
+        font-size: 5vw; /*responsive font  "vw" unit, which means the "viewport width".*/
+        color: white;
+      }
+      /* Container for flexboxes */
+      section {
+        display: -webkit-flex;
+        display: flex;
+      }
+      /* Style the navigation menu */
+      nav {
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        background: #ccc;
+        padding: 20px;
+      }
+      /* style the list inside the menu */
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      /* style the content */
+      article {
+        -webkit-flex: 3;
+        -ms-flex: 3;
+        flex: 3;
+        background: #f1f1f1;
+        padding: 20px;
+      }
+      /* Style the footer */
+      footer {
+        background-color: #777;
+        padding: 10px;
+        text-align: center;
+        color: white;
+      }
+      /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+      @media (max-width: 600px) {
+        section {
+          -webkit-flex-direction: column;
+          flex-direction: column;
+        }
+      }
 
-</style>
+      .left {
+        background-color: lightskyblue;
+        padding: 50px;
+        float: left;
+        width: 20%;
+      }
+      .main {
+        background-color: #f1f1f1;
+        padding: 50px;
+        float: left;
+        width: 60%;
+      }
+      .right {
+        background-color: lightgreen;
+        padding: 50px;
+        float: left;
+        width: 20%;
+      }
+      /* Use a media query to add a break point at 800px: */
+      @media screen and (max-width: 800px) {
+        .left,
+        .main,
+        .right {
+          width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+        }
+      }
 
-</head>
 
-<body>
-  
+      .theText{
+        font-family:Verdana; color:#aaaaaa;
+        margin-top: 100px;
+      }
+      .hello{
+        background-color: #e5e5e5;
+        padding: 5vw;
+        text-align: center;
 
+      }
+
+
+    </style>
+  </head>
+
+  <body>
     <h2>CSS Layout Flexbox</h2>
-    <p>In this example, we have created a header, two columns/boxes and a footer. On smaller screens, the columns will stack on top of each other.</p>
+    <p>
+      In this example, we have created a header, two columns/boxes and a footer.
+      On smaller screens, the columns will stack on top of each other.
+    </p>
     <p>Resize the browser window to see the responsive effect.</p>
-    <p><strong>Note:</strong> Flexbox is not supported in Internet Explorer 10 and earlier versions.</p>
+    <p>
+      <strong>Note:</strong> Flexbox is not supported in Internet Explorer 10
+      and earlier versions.
+    </p>
 
     <header>
-        <h2>Cities</h2>
-      </header>
-      
-      <section>
-        <nav>
-          <ul>
-            <li><a href="#">London</a></li>
-            <li><a href="#">Paris</a></li>
-            <li><a href="#">Tokyo</a></li>
-          </ul>
-        </nav>
-        
-        <article>
-          <h1>London</h1>
-          <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
-          <img src="https://images.unsplash.com/photo-1526129318478-62ed807ebdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="London City" style="max-width:100%" >
-        </article>
-      </section>
-      
-      <footer>
-        <p>Footer</p>
-      </footer>
+      <h2>Cities</h2>
+    </header>
 
-</body>
+    <section>
+      <nav>
+        <ul>
+          <li><a href="#">London</a></li>
+          <li><a href="#">Paris</a></li>
+          <li><a href="#">Tokyo</a></li>
+        </ul>
+      </nav>
 
+      <article>
+        <h1>London</h1>
+        <p>
+          London is the capital city of England. It is the most populous city in
+          the United Kingdom, with a metropolitan area of over 13 million
+          inhabitants.
+        </p>
+        <img
+          src="https://images.unsplash.com/photo-1526129318478-62ed807ebdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+          alt="London City"
+          style="max-width:100%"
+        />
+      </article>
+    </section>
+
+    <footer>
+      <p>Footer</p>
+    </footer>
+
+    <h2>Media Queries</h2>
+    <p>Resize the browser window.</p>
+
+    <p>Make sure you reach the breakpoint at 800px when resizing this frame.</p>
+
+    <div class="left">
+      <p>Left menu</p>
+    </div>
+
+    <div class="main">
+      <p>Main menu</p>
+    </div>
+
+    <div class="right">
+      <p>Right menu</p>
+    </div>
+    <br> <br> <br />
+    <h1 class="theText">Responsive Web Page - Full Example</h1>
+    <div class="hello">
+
+    </div>
+
+  </body>
 </html>
