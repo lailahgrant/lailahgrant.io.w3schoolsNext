@@ -280,15 +280,29 @@ width: 100%;
     
     <h2>The output Element</h2>
 <p>The output element represents the result of a calculation.</p>
-    <form action="">
-      0<input type="range" id="a" name="a" value="50">100 &nbsp;&nbsp;&nbsp;
-      <input type="number" id="b" name="b" value="50">
-      <input type="number" id="c" name="c">
+    <form action="" oninput="x.value = parseInt(a.value) + parseInt(b.value) + parseInt(c.value)">
+      0<input type="range" id="a" name="a" value="50">100 &nbsp; + &nbsp;&nbsp;
+      <input type="number" id="b" name="b" value="50"> &nbsp; +
+      <input type="number" id="c" name="c"> &nbsp; =
+      <output name="x" for="a b c"></output> &nbsp;
+      <input type="submit">
     </form>
 
-
-
-
+    <h1>What is HTML Canvas?</h1>
+    <p> The HTML canvas tag element is used to draw graphics, on the fly, via JavaScript.</p>
+    <p>The canvas element is only a container for graphics. You must use JavaScript to actually draw the graphics.
+    <p> Canvas has several methods for drawing paths, boxes, circles, text, and adding images.</p>
+    <h2>Canvas Examples</h2>
+    <p>A canvas is a rectangular area on an HTML page. By default, a canvas has no border and no content</p>
+      <canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas>
+      <canvas id="theCanvas" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas>
+      <canvas id="aCanvas" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas>
+      <canvas id="oneCanvas" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas>
+      
+      <canvas id="twoCanvas" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas>
+      <canvas id="threeCanvas" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas>
+      <canvas id="fourCanvas" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas>
+      <canvas id="fiveCanvas" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas>
 
     <h2>Media Queries</h2>
     <p>Resize the browser window.</p>
@@ -336,6 +350,46 @@ width: 100%;
     <div style="background-color:#e5e5e5; text-align:center; padding:10px; margin-top: 10px;">&copy copyright 2020 lailahgrant</div>
 
    
+
+<script>
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+//line
+ctx.moveTo(0,0);
+ctx.lineTo(200,100);
+ctx.stroke();
+
+//circle
+ctx.beginPath();
+ctx.arc(95,50,40,0,2*Math.PI);
+ctx.stroke();
+
+//draw text
+ctx.font = "30px Arial";
+ctx.fillText("Hello World",10,50);
+
+//stoke text
+var d = document.getElementById("theCanvas");
+var dtx = d.getContext("2d");
+dtx.font = "50px Chiller";
+dtx.strokeText("Hello World", 10,50);
+
+/////draw linear gradient
+var l = document.getElementById("aCanvas");
+var li = l.getContext("2d");
+//create gradient
+var gd = li.createLinearGradient(0,0,200,0);
+gd.addColorStop(0, "red");
+gd.addColorStop(1, "white");
+//fill with gradient
+li.fillStyle = gd;
+li.fillRect(10,10,150,80);
+
+
+
+
+</script>
 
   </body>
 </html>
